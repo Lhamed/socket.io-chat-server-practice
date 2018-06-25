@@ -9,7 +9,8 @@ http.createServer(function (req, res) {
 
 var io = require('socket.io');
 var socket = io.listen(server);
-1  io.on('connection', function (client) {
+
+io.on('connection', function (client) {
     client.on('join', function (data) {
         console.log(data.user + ' : ' + data.roomname);
 
@@ -22,7 +23,7 @@ var socket = io.listen(server);
     client.on('chat', function (data) {
         console.log(data.user + ' : ' + data.msg + ' : ' + data.date);
 
-        socket.sockets.in(client.room).emit('chat', data);
+        io.sockets.in(client.room).emit('chat', data);
     });
 
     client.on('disconnect', function () {
