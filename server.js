@@ -1,12 +1,13 @@
-
+'use strict';
 var http = require('http');
-var io = require('socket.io');
-var port = process.env.port || 1337;
-var server = http.createServer(function (req, res) {
+var port = process.env.PORT || 1337;
+
+http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World 2n');
+    res.end('Hello World\n');
 }).listen(port);
 
+var io = require('socket.io');
 var socket = io.listen(server);
 1  io.on('connection', function (client) {
     client.on('join', function (data) {
@@ -27,4 +28,3 @@ var socket = io.listen(server);
     client.on('disconnect', function () {
     });
 })
-
