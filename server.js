@@ -2,7 +2,7 @@
 var http = require('http');
 var port = process.env.PORT || 1337;
 
-http.createServer(function (req, res) {
+const server = http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hello World\n');
 }).listen(port);
@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
 var io = require('socket.io');
 var socket = io.listen(server);
 
-io.on('connection', function (client) {
+socket.on('connection', function (client) {
     client.on('join', function (data) {
         console.log(data.user + ' : ' + data.roomname);
 
@@ -23,7 +23,7 @@ io.on('connection', function (client) {
     client.on('chat', function (data) {
         console.log(data.user + ' : ' + data.msg + ' : ' + data.date);
 
-        io.sockets.in(client.room).emit('chat', data);
+        socket.sockets.in(client.room).emit('chat', data);
     });
 
     client.on('disconnect', function () {
