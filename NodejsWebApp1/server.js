@@ -4,7 +4,7 @@ var io = require('socket.io')({
 
 
 
-io.attach(process.env.PORT || 1337);
+io.attach( 1337);
 
 io.on('connection', function (socket) {
     socket.on('join', function (data) {
