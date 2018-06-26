@@ -11,13 +11,13 @@ var port = process.env.PORT || 1337;
 server.listen(port);
 
 console.log("Server running at http://localhost:%d", port);
-var io = require('socket.io')(server);
+var io = require('socket.io')(server, { transports: ['websocket'] });
 
-io.attach(server, {
-    pingInterval: 10000,
-    pingTimeout: 5000,
-    cookie: false
-});
+//io.attach(server, {
+//    pingInterval: 10000,
+//    pingTimeout: 5000,
+//    cookie: false
+//});
 
 
 io.on('connection', function (client) {
