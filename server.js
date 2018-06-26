@@ -1,6 +1,6 @@
 
 var http = require('http');
-var port = process.env.PORT || 1337;
+var port = process.env.PORT || 80;
 var io = require('socket.io')({
     transports: ['websocket'],
 });
