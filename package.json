@@ -1,27 +1,14 @@
 {
-  "name": "hi",
-  "version": "1.0.0",
-  "description": "ChatTest_2",
-  "scripts": {
-    "start": "node server"
-  },
-  "engines": {
-    "node": "~6.10.x"
-  },
-  "author": "Puzzlespace",
-  "dependencies": {
-    "express": "^4.16.3",
-    "socket.io": "^2.1.1"
-  },
-  "main": "server.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lhamed/Node_ChatServer_t_1.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Lhamed/Node_ChatServer_t_1/issues"
-  },
-  "homepage": "https://github.com/Lhamed/Node_ChatServer_t_1#readme"
+    "name": "app-service-hello-world",
+    "description": "Simple Hello World Node.js sample for Azure App Service",
+    "version": "0.0.1",
+    "private": true,
+    "license": "MIT",
+    "author": "Microsoft",
+    "engines": {
+        "node": ">=6.9.1"
+    },
+    "scripts": {
+        "start": "node index.js"
+    }
 }
