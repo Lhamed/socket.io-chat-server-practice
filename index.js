@@ -11,9 +11,7 @@ var port = process.env.PORT || 1337;
 server.listen(port);
 
 console.log("Server running at http://localhost:%d", port);
-var io = require('socket.io')({
-    transports: ['websocket'],
-});
+var io = require('socket.io')(server);
 
 io.attach(server, {
     pingInterval: 10000,
