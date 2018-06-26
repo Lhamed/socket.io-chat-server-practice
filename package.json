@@ -1,14 +1,26 @@
 {
-    "name": "app-service-hello-world",
-    "description": "Simple Hello World Node.js sample for Azure App Service",
-    "version": "0.0.1",
-    "private": true,
-    "license": "MIT",
-    "author": "Microsoft",
-    "engines": {
-        "node": ">=6.9.1"
-    },
-    "scripts": {
-        "start": "node index.js"
-    }
+  "name": "lhamed",
+  "description": "Simple Hello World Node.js sample for Azure App Service",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "author": "Microsoft",
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lhamed/Node_ChatServer_t_1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lhamed/Node_ChatServer_t_1/issues"
+  },
+  "homepage": "https://github.com/Lhamed/Node_ChatServer_t_1#readme",
+  "dependencies": {
+    "socket.io": "^2.1.1"
+  }
 }
