@@ -23,6 +23,7 @@ io.attach(server, {
 
 
 io.on('connection', function (client) {
+    console.log('己傍利栏肺 目池记');
     client.on('join', function (data) {
         console.log(data.user + ' : ' + data.roomname);
 
